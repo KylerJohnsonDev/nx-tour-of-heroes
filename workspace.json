@@ -1,6 +1,31 @@
 {
   "version": 2,
   "projects": {
+    "shared-data-access-heroes": {
+      "projectType": "library",
+      "root": "libs/shared/data-access-heroes",
+      "sourceRoot": "libs/shared/data-access-heroes/src",
+      "prefix": "nx-tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access-heroes"],
+          "options": {
+            "jestConfig": "libs/shared/data-access-heroes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access-heroes/src/**/*.ts",
+              "libs/shared/data-access-heroes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "tour-of-heroes": {
       "projectType": "application",
       "root": "apps/tour-of-heroes",
@@ -94,6 +119,33 @@
         }
       }
     },
+    "tour-of-heroes-dashboard-feature-dashboard": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/dashboard/feature-dashboard",
+      "sourceRoot": "libs/tour-of-heroes/dashboard/feature-dashboard/src",
+      "prefix": "nx-tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/tour-of-heroes/dashboard/feature-dashboard"
+          ],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/dashboard/feature-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/dashboard/feature-dashboard/src/**/*.ts",
+              "libs/tour-of-heroes/dashboard/feature-dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "tour-of-heroes-e2e": {
       "root": "apps/tour-of-heroes-e2e",
       "sourceRoot": "apps/tour-of-heroes-e2e/src",
@@ -116,6 +168,58 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/tour-of-heroes-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "tour-of-heroes-hero-details-feature-hero-details": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/hero-details/feature-hero-details",
+      "sourceRoot": "libs/tour-of-heroes/hero-details/feature-hero-details/src",
+      "prefix": "nx-tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/tour-of-heroes/hero-details/feature-hero-details"
+          ],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/hero-details/feature-hero-details/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/hero-details/feature-hero-details/src/**/*.ts",
+              "libs/tour-of-heroes/hero-details/feature-hero-details/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "tour-of-heroes-heroes-feature-heroes": {
+      "projectType": "library",
+      "root": "libs/tour-of-heroes/heroes/feature-heroes",
+      "sourceRoot": "libs/tour-of-heroes/heroes/feature-heroes/src",
+      "prefix": "nx-tour-of-heroes",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tour-of-heroes/heroes/feature-heroes"],
+          "options": {
+            "jestConfig": "libs/tour-of-heroes/heroes/feature-heroes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/heroes/feature-heroes/src/**/*.ts",
+              "libs/tour-of-heroes/heroes/feature-heroes/src/**/*.html"
+            ]
           }
         }
       }
