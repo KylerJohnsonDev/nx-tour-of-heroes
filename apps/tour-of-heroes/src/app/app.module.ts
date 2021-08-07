@@ -9,7 +9,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { MessagesComponent } from './messages/messages.component';
+import { FeatureDashboardModule } from '@toh/feature-dashboard';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
+    FeatureDashboardModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -27,7 +27,6 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   declarations: [
     AppComponent,
-    MessagesComponent,
   ],
   bootstrap: [ AppComponent ]
 })
