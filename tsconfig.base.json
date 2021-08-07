@@ -26,6 +26,9 @@
       ],
       "@toh/feature-heroes": [
         "libs/tour-of-heroes/heroes/feature-heroes/src/index.ts"
+      ],
+      "@shared/models": [
+        "libs/shared/models"
       ]
     }
   },
