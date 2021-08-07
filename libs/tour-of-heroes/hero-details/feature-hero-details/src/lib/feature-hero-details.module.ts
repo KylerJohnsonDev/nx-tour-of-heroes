@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { DataAccessHeroesModule } from '@shared/data-access-heroes';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: ':id', component: HeroDetailComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     DataAccessHeroesModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [HeroDetailComponent],

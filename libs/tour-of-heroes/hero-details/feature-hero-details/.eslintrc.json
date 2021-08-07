@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "nx-tour-of-heroes",
+            "prefix": "app",
             "style": "kebab-case"
           }
         ]

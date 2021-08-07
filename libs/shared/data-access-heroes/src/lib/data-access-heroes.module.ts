@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroService } from './hero.service';
 
@@ -10,4 +10,13 @@ import { HeroService } from './hero.service';
     HeroService
   ]
 })
-export class DataAccessHeroesModule {}
+export class DataAccessHeroesModule {
+  forRoot(): ModuleWithProviders<DataAccessHeroesModule> {
+    return {
+      ngModule: DataAccessHeroesModule,
+      providers: [
+        HeroService
+      ]
+    }
+  }
+}
