@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Hero } from '@shared/models';
+import { HeroService } from '@shared/data-access-heroes';
 
 @Component({
   selector: 'app-hero-detail',
@@ -24,6 +24,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   getHero(): void {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
