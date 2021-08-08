@@ -39,10 +39,6 @@
     "tour-of-heroes-dashboard-feature-dashboard": {
       "tags": ["type:feature", "scope:tour-of-heroes"]
     },
-    "tour-of-heroes-e2e": {
-      "tags": [],
-      "implicitDependencies": ["tour-of-heroes"]
-    },
     "tour-of-heroes-hero-details-feature-hero-details": {
       "tags": ["type:feature", "scope:tour-of-heroes"]
     },

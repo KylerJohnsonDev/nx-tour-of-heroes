@@ -1,5 +1,4 @@
 {
-  "$schema": "tour-of-heroes/node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -7,31 +6,35 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "name": ""
         },
         "@schematics/angular:application": {
-          "strict": true
+          "outputPath": "",
+          "index":"1",
+          "main": "",
+          "tsConfig": ""
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/tour-of-heroes",
+      "sourceRoot": "apps/tour-of-heroes/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/tour-of-heroes",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "index": "apps/tour-of-heroes/src/index.html",
+            "main": "apps/tour-of-heroes/src/main.ts",
+            "polyfills": "apps/tour-of-heroes/src/polyfills.ts",
+            "tsConfig": "apps/tour-of-heroes/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/tour-of-heroes/src/favicon.ico",
+              "apps/tour-of-heroes/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "apps/tour-of-heroes/src/styles.scss"
             ],
             "scripts": []
           },
@@ -51,8 +54,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/tour-of-heroes/src/environments/environment.ts",
+                  "with": "apps/tour-of-heroes/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -102,6 +105,66 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "shared-data-access-heroes": {
+      "root": "libs/shared/data-access-heroes",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access-heroes/src/**/*.ts",
+              "libs/shared/data-access-heroes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "tour-of-heroes-dashboard-feature-dashboard": {
+      "root": "libs/tour-of-heroes/dashboard/feature-dashboard",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/dashboard/feature-dashboard/src/**/*.ts",
+              "libs/tour-of-heroes/dashboard/feature-dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "tour-of-heroes-hero-details-feature-hero-details": {
+      "root": "libs/tour-of-heroes/hero-details/feature-hero-details",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/hero-details/feature-hero-details/src/**/*.ts",
+              "libs/tour-of-heroes/hero-details/feature-hero-details/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "tour-of-heroes-heroes-feature-heroes": {
+      "root": "libs/tour-of-heroes/heroes/feature-heroes",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tour-of-heroes/heroes/feature-heroes/src/**/*.ts",
+              "libs/tour-of-heroes/heroes/feature-heroes/src/**/*.html"
+            ]
           }
         }
       }
