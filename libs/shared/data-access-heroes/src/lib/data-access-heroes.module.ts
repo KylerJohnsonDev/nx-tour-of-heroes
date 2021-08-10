@@ -11,7 +11,7 @@ import { HeroService } from './hero.service';
   ]
 })
 export class DataAccessHeroesModule {
-  forRoot(): ModuleWithProviders<DataAccessHeroesModule> {
+  static forRoot(): ModuleWithProviders<DataAccessHeroesModule> {
     return {
       ngModule: DataAccessHeroesModule,
       providers: [

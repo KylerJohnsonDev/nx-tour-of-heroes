@@ -17,7 +17,7 @@ import { DataAccessHeroesModule } from '@shared/data-access-heroes';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    DataAccessHeroesModule,
+    DataAccessHeroesModule.forRoot(),
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
